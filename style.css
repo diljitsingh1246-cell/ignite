@@ -1,0 +1,499 @@
+/* --- Global Styles --- */
+:root {
+  --primary-color: rgb(255, 166, 0); /* Magenta Pink */
+  --secondary-color: #cccccc; /* Light Gray for secondary text */
+  --dark-color: #ffffff; /* White text for contrast on dark background */
+  --off-white-color: #232323; /* Very Dark Background (Body) */
+  --white-color: rgb(59, 59, 59); /* Darker card/navbar background color */
+  --spacing: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color); /* Sets default text color to WHITE */
+  background-color: var(--off-white-color); /* Very dark background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color); /* Default link color is pink */
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700; /* Increased weight for impact */
+
+  /* --- GRADIENT TEXT for General H2 (Blue to Pink) --- */
+  background: linear-gradient(90deg, #007bff, var(--primary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Buttons (Primary, Secondary, Nav) --- */
+.btn-primary, .btn-secondary, .nav-btn, .event-cta-link button {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--dark-color) !important; /* Text color: WHITE */
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: rgb(255, 140, 0); /* Darker magenta */
+  border-color: rgb(255, 140, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgb(255, 150, 0); /* Pink shadow on hover */
+}
+
+.btn-secondary {
+  background-color: var(--white-color); /* Darker card color */
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-color) !important; /* Text color: WHITE */
+  transform: translateY(-2px);
+}
+
+/* Specific Navbar Button Style */
+.nav-btn {
+    padding: 8px 18px; /* Slightly smaller button for navbar */
+    margin-left: 20px;
+    border-bottom: none !important; /* Remove bottom border from navbar hover effect */
+}
+
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--white-color); 
+  box-shadow: 0 2px 8px rgb(255, 166, 0); /* Darker shadow for dark background */
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px; 
+  width: 200px;  
+  margin-right: 15px; 
+  margin-left: 0px; 
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  /* --- GRADIENT TEXT for LOGO (Blue/Purple to Pink) --- */
+  background: linear-gradient(90deg, rgb(255, 166, 0), var(--primary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Align links and button vertically */
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: var(--dark-color); /* Nav link color: WHITE */
+  font-weight: 500;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover:not(.nav-btn) {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* HERO SECTION */
+/* -------------------------------------------------------------------------- */
+
+.hero {
+  min-height: 85vh;
+  /* Background Image and Overlay */
+  background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.75)),
+                     url('Gemini_Generated_Image_odpr8rodpr8rodpr.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  color: var(--dark-color);
+  padding: 100px 0; 
+  display: flex; 
+  align-items: center;
+}
+
+.hero .container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 4rem; /* Large and bold */
+  margin-bottom: 20px;
+  line-height: 1.1;
+  /* White/Light gradient text for readability on dark background */
+  background: linear-gradient(90deg, var(--dark-color), var(--secondary-color)); 
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.hero .btn-primary {
+  font-size: 1.1rem;
+  padding: 15px 35px;
+}
+
+
+/* --- General Section Styling --- */
+section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.features {
+  background-color: var(--off-white-color);
+}
+
+.about {
+  background-color: var(--white-color); 
+  padding-bottom: 60px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* FEATURES SECTION */
+/* -------------------------------------------------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.feature-card {
+  background: var(--white-color); 
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgb(255, 166, 0); /* Soft pink hover shadow */
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--secondary-color); 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* EVENTS SECTION */
+/* -------------------------------------------------------------------------- */
+.events {
+    background-color: var(--off-white-color);
+}
+
+.events .event-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.events .logo-img { 
+    width: 200px; /* Consistent size for event images */
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.events .logo-img:hover {
+    background-color: rgb(255, 166, 0);  
+  border-color: rgb(255, 166, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgb(255, 150, 0);
+}
+
+.event-cta-link button {
+    /* Style the 'View More IGNITE Events' button */
+    padding: 15px 30px; 
+       background-color: rgb(255, 166, 0);  
+  border-color: rgb(255, 166, 0);
+  transform: translateY(10px);
+  box-shadow: 0 12px 30px rgb(255, 150, 0);
+    border-radius: 8px; 
+    font-size: 1.1rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.event-cta-link button:hover {
+    background-color: rgb(255, 166, 0);
+    box-shadow: rgb(255, 166, 0);
+    transform: translateY(-2px);
+    
+}
+
+.events p {
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.event-card {
+  background: var(--white-color);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgb(255, 166, 0); 
+  border: 1px solid rgb(255, 255, 255); 
+  transition: transform 0.3s ease;
+}
+
+.event-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.event-card p {
+  color: var(--secondary-color); 
+}
+.about {
+    /* Existing Styles */
+    background-color: var(--card-bg-color); 
+    padding-bottom: 60px;
+    
+    /* New Divider Style */
+    border-bottom: 1px solid var(--dark-bg-color); /* A thin line matching the body background */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* A subtle shadow to give depth */
+}
+/* Custom Divider Between About and Contact */
+.about .container::after {
+    content: ''; /* Required for pseudo-elements */
+    display: block;
+    width: 80px; /* Width of the line */
+    height: 4px; /* Thickness of the line */
+    background-color: var(--primary-color); /* Use your vibrant orange color */
+    margin: 40px auto 0 auto; /* Center it, give it margin on top */
+    border-radius: 2px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CONTACT SECTION */
+/* -------------------------------------------------------------------------- */
+.contact {
+    background-color: var(--white-color);
+}
+
+.contact p {
+    color: var(--secondary-color); 
+}
+
+.contact a {
+    color: var(--dark-color); /* White text for links */
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: var(--primary-color); 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* CTA SECTION */
+/* -------------------------------------------------------------------------- */
+.cta {
+  background-color: var(--primary-color); /* Used primary color for high-contrast CTA */
+  color: var(--dark-color); 
+  padding: 60px 0;
+}
+
+.cta h2 {
+  /* H2 in CTA section is now white */
+  color: var(--dark-color);
+  -webkit-text-fill-color: var(--dark-color);
+  background: none;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--dark-color); 
+}
+
+.cta .btn-secondary {
+  /* Secondary button style for CTA on pink background */
+  background-color: var(--dark-color);
+  color: var(--primary-color) !important; 
+  border-color: var(--dark-color);
+}
+
+.cta .btn-secondary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color) !important; 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------------------------------- */
+.footer {
+  background-color: #1a1a1a; 
+  color: var(--secondary-color);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* MEDIA QUERIES */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+  .logo-wrapper { 
+      margin-bottom: 15px;
+  }
+  .nav-links {
+    padding: 0;
+    justify-content: center;
+  }
+  .nav-links li {
+    margin: 0 10px;
+  }
+  .hero h2 {
+    font-size: 2.5rem; 
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .events .logo-img {
+    width: 150px; 
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none; 
+  }
+  .hero h2 {
+    font-size: 2rem; 
+  }
+  .hero p {
+    font-size: 1.1rem; 
+  }
+  .btn-primary, .btn-secondary, .nav-btn, .event-cta-link button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .events .logo-img {
+    width: 90%; 
+    height: auto;
+  }
+  .event-grid {
+    grid-template-columns: 1fr; 
+  }
+}
